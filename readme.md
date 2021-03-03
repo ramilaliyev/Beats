@@ -15,6 +15,7 @@ ___
 * JavaScript
 ***
 * FlexBox
+* SCSS
 ***
 * Gulp
 ***
