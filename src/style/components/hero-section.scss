@@ -1,0 +1,27 @@
+.hero-section {
+    background: $body;
+    position: relative;
+    height: 100vh;
+
+    &::after {
+        content: url(./decor-icons/decorative-icon-1.svg);
+        position: absolute;
+        right: rem(127px);
+        bottom: rem(-30px);
+
+        @include tablets {
+            // display: none;
+        }
+    }
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @include phones {
+        justify-content: space-evenly;
+    }
+}

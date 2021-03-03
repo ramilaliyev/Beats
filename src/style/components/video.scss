@@ -1,0 +1,139 @@
+.video {
+    width: rem(700px);
+    height: rem(400px);
+    position: relative;
+
+    @include tablets {
+        width: rem(600px);
+        height: (350px);
+    }
+
+    @include phones {
+        width: rem(400px);
+        height: rem(250px);
+    }
+}
+
+.video__wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.video__splash {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: ease-in-out .4s;
+
+    &--active {
+        display: none;
+    }
+}
+
+.video__splash-content {
+    position: relative;
+    height: 100%;
+}
+
+.video__splash-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video__splash-play-btn {
+    opacity: .85;
+    cursor: pointer;
+}
+
+.video__splash-play-icon {
+    fill: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: ease-in-out .5s;
+    
+    &:hover {
+        transform: translate(-50%, -50%) scale(.9);
+    }
+    
+    @include tablets {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.video__controls {
+    display: flex;
+    background: #000000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(25px);
+    height: rem(25px);
+    z-index: $baseZIndex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.video__play {
+    height: 100%;
+    width: rem(12px);
+    background: url('decor-icons/VideoPlay.svg') center no-repeat;
+    transition: ease-in-out .4s;
+    cursor: pointer;
+    
+    &--active {
+        background: url('decor-icons/VideoPause.svg') center no-repeat;
+    }
+
+    @include phones {
+        margin-right: rem(5px);
+        width: rem(15px);
+    }
+}
+
+.video__playback {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    
+    @include phones {
+        width: 60%;
+    }
+}
+
+.video__playback-bar {
+    background: $body;
+    width: 100%;
+    height: rem(3px);
+    cursor: pointer;
+}
+
+.video__playback-dot {
+    background: url('decor-icons/VideoDot.svg') center no-repeat;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    transition: ease 1s;
+    cursor: pointer;
+    width: rem(15px);
+    height: rem(15px);
+    display: flex;
+    align-items: center;
+}
+
+.video__time {
+    display: flex;
+}
+
+

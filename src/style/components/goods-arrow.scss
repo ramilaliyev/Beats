@@ -1,0 +1,36 @@
+.goods__arrow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in-out .4s;
+
+    &:hover {
+        transform: scale(0.85);
+    }
+
+    @include phones {
+        height: 100%;
+    }
+}
+
+.goods__arrow-left {
+    margin-left: rem(50px);
+
+    @include phones {
+        margin-left: rem(20px);
+    }
+}
+
+.goods__arrow-right {
+    margin-right: rem(50px);
+
+    @include phones {
+        margin-right: rem(20px);
+    }
+}
+
+.goods__arrow-svg {
+    height: rem(40px);
+    width: rem(24px);
+}
+

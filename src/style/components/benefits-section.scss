@@ -1,0 +1,29 @@
+.benefits-section {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: url(./decor-icons/decorative-icon-3.svg);
+        left: 4%;
+        bottom: -2%;
+
+        @include phones {
+            bottom: -3%;
+        }
+    }
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.benefits-container {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+}
+

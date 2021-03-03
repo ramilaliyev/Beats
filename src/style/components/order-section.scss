@@ -1,0 +1,9 @@
+.order-section {
+    background: url('img/order_bg.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.order__title.section__title {
+    color: $white;
+    padding-top: rem(70px);
+}

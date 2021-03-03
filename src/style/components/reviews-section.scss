@@ -1,0 +1,25 @@
+.reviews-section {
+    position: relative;
+
+    &::after {
+        content: url('decor-icons/decorative-icon-7.svg');
+        bottom: -4%;
+        left: 5%;
+        position: absolute;
+        z-index: $baseZIndex;
+
+        @include tablets {
+            bottom: -2.5%;
+        }
+
+        @include phones {
+            bottom: -3.5%;
+        }
+    }
+}
+.reviews-container {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

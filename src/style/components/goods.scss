@@ -1,0 +1,121 @@
+.goods {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+// Стрелки отстилизованны в файле goods-arrow.scss
+
+.goods__display {
+    width: 100%;
+    overflow: hidden;
+}
+
+.goods__list {
+    display: flex;
+    width: 100%;
+    transition: ease-in-out .4s;
+}
+
+.goods__item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 100%;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.goods__img-block {
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+        margin-bottom: rem(50px);
+    }
+}
+
+.goods__img {
+    width: rem(452px);
+    height: rem(452px);
+
+    @include phones {
+        width: rem(300px);
+        height: rem(300px);
+    }
+}
+
+.goods__content {
+    @include tablets {
+        width: 85%;
+    }
+}
+
+// Параметры отстилизованы в файле goods-params.scss
+
+.goods__title {
+    font-size: rem(36px);
+    font-weight: 700;
+    color: $black;
+    text-transform: uppercase;
+    width: rem(419px);
+    line-height: 1.2;
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+    }
+
+    @include phones {
+        font-size: rem(30px);
+    }
+}
+
+.goods__desc {
+    margin: rem(25px) 0;
+    width: rem(400px);
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.goods__info {
+    display: flex;
+    margin-bottom: rem(25px);
+}
+
+.goods__info-item {
+    width: 50%;
+
+    @include tablets {
+        text-align: center;
+    }
+}
+
+
+.goods__info-value {
+    color: $black;
+    font-weight: 700;
+}
+
+.goods__order {
+    display: flex;
+
+    @include tablets {
+        justify-content: space-evenly;
+    }
+}
+
+.goods__price {
+    width: 50%;
+    font-size: rem(36px);
+    color: $black;
+}
+
+.goods__order-btn {
+    width: 50%;
+}

@@ -1,0 +1,40 @@
+.form-response {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $black;
+    display: none;
+    align-items: center;
+    
+    &--active {
+        display: flex;
+    }
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+    width: rem(310px);
+    height: rem(175px);
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal__response-text {
+    color: #000;
+    margin-bottom: rem(20px);
+    text-align: center;
+    padding: 0 rem(22px);
+}
+
+.modal__close-btn {
+    cursor: pointer;
+}

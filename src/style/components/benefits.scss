@@ -1,0 +1,134 @@
+.benefits__title {
+    padding-top: rem(80px);
+    margin-bottom: rem(20px);
+
+    @include phones {
+        padding-top: 0;
+    }
+}
+
+.benefits__desc {
+    padding: rem(0px) 20%;
+    text-align: center;    
+    margin-bottom: rem(60px);
+
+    @include tablets {
+        padding: 0 10%;
+    }
+}
+
+// .benefits {
+//     display: flex;
+// }
+
+.benefits__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include phones {
+        flex-direction: column;
+        height: 65%;
+    }
+}
+
+.benefits__item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    // justify-content: space-between;
+    align-items: center;
+    height: rem(270px);
+    position: relative;
+    padding: 0% 3%;
+
+    &::before {
+        content: url(./decor-icons/decorative-icon-2.svg);
+        top: 20%;
+        right: 0;
+        transform: translate(50%);
+        position: absolute;
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    @include tablets {
+        padding: 0;
+    }
+
+    @include phones {
+        flex-direction: row;
+    }
+}
+
+.benefit {
+    text-align: center;
+}
+
+.benefit__image {
+    position: relative;
+    margin-bottom: rem(20px);
+
+    @include phones {
+        margin-right: rem(30px);
+    }
+}
+
+.benefit__image-wrapper {
+    width: rem(128px);
+    height: rem(128px);
+    background-color: $body;
+    border-radius: 100%;
+}
+
+.benefit__image-icon-svg {
+    width: rem(55px);
+    height: rem(55px);position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.benefit__text {
+    @include phones {
+        text-align: left;
+    }
+}
+
+.benefit__title {
+    margin-bottom: rem(7px);
+    color: $black;
+    font-weight: 700;
+
+    @include phones {
+        text-align: left;
+    }
+}
+
+.benefit__desc {
+    width: rem(300px);
+
+    @include tablets {
+        width: rem(240px);
+    }
+
+    @include phones {
+        width: rem(340px);
+        text-align: left;
+        margin-bottom: rem(20px);
+    }
+}

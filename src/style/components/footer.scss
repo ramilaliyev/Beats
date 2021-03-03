@@ -1,0 +1,64 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(20px) rem(30px) rem(20px) rem(70px);
+
+    @include phones {
+        padding: rem(20px) rem(30px) rem(20px) rem(20px);
+    }
+}
+
+.phone.footer__phone {
+    justify-content: flex-start;
+
+    &:hover {
+        .phone__icon-svg {
+            fill: $black;
+        }
+
+        .phone__link {
+            color: $black;
+        }
+    }
+}
+
+.phone__icon-svg.footer__phone-icon-svg {
+    margin-right: rem(7px);
+}
+
+.footer__society {
+    display: flex;
+}
+
+.footer__society-list {
+    display: flex;
+    align-items: center;
+}
+
+.footer__society-item {
+    margin-right: rem(10px);
+    // margin-top: rem(20px);
+    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.footer__society-icon {
+    width: rem(30px);
+    height: rem(30px);
+
+    fill: $gray;
+
+    transition: .15s ease-in-out;
+
+    &:hover {
+        fill: $black;
+    }
+}

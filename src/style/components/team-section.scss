@@ -1,0 +1,26 @@
+.team-section {
+    position: relative;
+
+    &::after {
+        content: url('decor-icons/decorative-icon-6.svg');
+        height: rem(24px);
+        width: rem(24px);
+        position: absolute;
+        top: -2%;
+        right: 7%;
+
+        @include tablets {
+            right: 15%;
+        }
+    }
+}
+
+.team-container {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+    }
+}

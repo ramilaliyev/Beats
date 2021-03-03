@@ -1,0 +1,18 @@
+.red-btn {
+    background: $red;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: rem(54px);
+    width: rem(163px);
+    border-radius: rem(100px);
+    transition: ease-in .15s;
+    
+    &:hover {
+        background: transparent;
+        color: $black;
+        border: rem(1.5px) solid $black;
+    }
+}

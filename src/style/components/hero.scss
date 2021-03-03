@@ -1,0 +1,94 @@
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include tablets {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+}
+
+.hero__content {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.hero__title {
+    font-size: rem(48px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+    width: rem(400px);
+    line-height: rem(52px);
+    margin-bottom: rem(22px);
+
+    @include tablets {
+        width: rem(750px);
+    }
+
+    @include phones {
+        width: rem(360px);
+    }
+}
+
+.hero__desc {
+    width: rem(332px);
+    margin-bottom: rem(36px);
+}
+
+.hero__red-btn {
+    margin-bottom: rem(70px);
+}
+
+.hero__advantages {
+    @include tablets {
+        display: none;
+    }
+}
+
+.hero__advantages-list {
+    display: flex;
+}
+
+.hero__advantages-item {
+    display: flex;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.hero__advantages-item-icon {
+    margin-right: rem(20px);
+}
+
+.hero__advantages-item-icon-svg {
+    height: rem(40px);
+    width: rem(40px);
+}
+
+.hero__advantages-item-text {
+    width: rem(114px);
+}
+
+.hero__picture-block {
+    margin-bottom: rem(65px);
+
+    @include phones {
+        margin-bottom: rem(33px);
+    }
+}
+
+.hero__picture {
+    @include phones {
+        height: rem(323px);
+        width: rem(323px);
+    }
+}

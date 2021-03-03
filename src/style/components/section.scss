@@ -1,0 +1,18 @@
+.section {
+    height: 100vh;
+}
+
+.section__title {
+    font-size: rem(48px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1.5px;
+
+    @include phones {
+        font-size: rem(32px);
+        letter-spacing: 0;
+    }
+}
